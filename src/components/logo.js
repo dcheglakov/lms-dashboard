@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Cube } from "emotion-icons/ion-ios";
-import tw from "twin.macro";
+import React from 'react'
+import styled from '@emotion/styled'
+import { Cube } from 'emotion-icons/ion-ios'
+import tw from 'twin.macro'
 
 const LogoContainer = styled.div`
   ${tw`flex-grow-0`}
-`;
+`
 
 const Logo = styled.button`
   ${tw`text-teal-300 font-mono inline-block hocus:text-teal-500`}
   &:after {
-    content: "_";
+    content: '_';
     animation-duration: 1s;
     animation-name: blink;
     animation-iteration-count: infinite;
@@ -27,7 +27,7 @@ const Logo = styled.button`
       opacity: 1;
     }
   }
-`;
+`
 
 function SiteLogo() {
   return (
@@ -37,7 +37,7 @@ function SiteLogo() {
         lrnSmthng
       </Logo>
     </LogoContainer>
-  );
+  )
 }
 
-export default SiteLogo;
+export default SiteLogo
