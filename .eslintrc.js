@@ -40,7 +40,7 @@ module.exports = {
         ],
         'semi': [
             'error',
-            'always'
+            'never'
         ],
         'emotion/jsx-import': 'error'
     }
