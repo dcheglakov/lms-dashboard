@@ -1,12 +1,21 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import tw from 'twin.macro';
+import React from "react";
+import styled from "@emotion/styled";
+import { Cube } from "emotion-icons/ion-ios";
+import tw from "twin.macro";
 
-const Logo = styled.button`
-  ${tw`text-gray-800 px-4 py-2 font-medium font-mono bg-teal-400 inline-block rounded-full hocus:text-teal-300 hocus:bg-gray-800`}
+const LogoContainer = styled.div`
+  ${tw`flex-grow-0`}
 `;
 
-const Animation = styled.span`
+const Logo = styled.button`
+  ${tw`text-teal-300 font-mono inline-block hocus:text-teal-500`}
+  &:after {
+    content: "_";
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
   @keyframes blink {
     from {
       opacity: 1;
@@ -18,17 +27,16 @@ const Animation = styled.span`
       opacity: 1;
     }
   }
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-  animation-name: blink;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; 
 `;
-
 
 function SiteLogo() {
   return (
-    <Logo as="a" href="/" title="SkillCrucial_">learnSmth<Animation>_</Animation></Logo>
+    <LogoContainer>
+      <Logo as="a" href="/" title="learnSmthg">
+        <Cube size={24} />
+        lrnSmthng
+      </Logo>
+    </LogoContainer>
   );
 }
 
